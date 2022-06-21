@@ -9,6 +9,22 @@ const img_url = [
 ];
 
 $(function(){
+
+    //년,월,일
+    let d = new Date();
+    let year = d.getFullYear();
+    let month = d.getMonth() + 1;
+    let date = d.getDate();
+
+    console.log(year, month, date);
+
+    //html에 날짜 표시
+    $('.year').html(year);
+    $('.month').html(month);
+    $('.date').html(date);
+    
+
+
     function changeBg() {
       let imgNum = Math.floor(Math.random() * 6)
       console.log(imgNum);
